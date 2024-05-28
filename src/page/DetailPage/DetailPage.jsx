@@ -73,6 +73,7 @@ export default function DetailPage() {
   // Nếu có thay đổi khi click sản phẩm thì set State để re-render lại hình
   // Cũng như set quantity về 1
   useEffect(() => {
+    setNotEnough(false);
     setImage(product.img1);
     setQuantity(1);
   }, [product]);
@@ -172,6 +173,10 @@ export default function DetailPage() {
             <div className="mt-8 mb-5">
               <span>CATEGORY : </span>
               <span className="text-neutral-400">{product.category}</span>
+            </div>
+            <div className="mt-8 mb-5">
+              <span>AVAILABLE : </span>
+              <span className="text-neutral-400">{product.count}</span>
             </div>
 
             {/* Xử lý phần nhập số lượng, nếu số lượng < 1 thì không giảm số nữa */}

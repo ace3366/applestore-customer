@@ -17,7 +17,7 @@ export default function Information() {
           throw new Error("Can not fetch data");
         }
         const resData = await response.json();
-        console.log(resData);
+
         setUser(resData.user);
       } catch (err) {
         console.log(err);

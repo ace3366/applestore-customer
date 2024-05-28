@@ -30,7 +30,7 @@ export default function OrderDetail() {
     };
     fetchOrder();
   }, []);
-  console.log(order);
+
   return (
     <div className="max-w-4xl mx-auto mt-10">
       <h1 className="text-3xl italic ">INFORMATION ORDER</h1>

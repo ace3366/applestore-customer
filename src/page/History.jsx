@@ -23,7 +23,7 @@ export default function History() {
         }
         const resData = await response.json();
         setOrders(resData.orders);
-        console.log("huh");
+       
       } catch (err) {
         console.log(err);
       }

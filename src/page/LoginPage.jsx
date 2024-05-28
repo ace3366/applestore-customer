@@ -76,7 +76,7 @@ export async function action({ request, params }) {
     });
     // Return validation errors
     if (!response.ok) {
-      console.log(response.ok);
+    
       return response;
     }
     return redirect("/");
