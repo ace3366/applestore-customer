@@ -1,0 +1,7 @@
+.choose i {
+  color: rgb(156 163 175);
+}
+.choose:hover i,
+.choose:hover {
+  color: #c07f00;
+}

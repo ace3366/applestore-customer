@@ -1,0 +1,7 @@
+.product img {
+  transition: filter 0.4s ease;
+}
+
+.product img:hover {
+  filter: opacity(70%);
+}

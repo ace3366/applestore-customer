@@ -1,0 +1,20 @@
+.product img {
+  transition: filter 0.4s ease;
+}
+
+.product img:hover {
+  filter: opacity(70%);
+}
+.product {
+  animation: product-popup 0.4s ease-out forwards;
+}
+@keyframes product-popup {
+  from {
+    transform: scale(0.8);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}

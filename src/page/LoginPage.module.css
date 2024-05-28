@@ -1,0 +1,12 @@
+.login {
+  width: 100vw;
+  height: 100vh;
+  background-size: cover;
+  background-repeat: repeat-y;
+  background-position: center;
+  background-image: url("../image/banner1.jpg");
+}
+.alert {
+  background-color: rgb(253 164 175);
+  transition: background-color 0.3s ease;
+}
