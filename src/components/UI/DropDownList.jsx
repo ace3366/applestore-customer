@@ -1,8 +1,8 @@
-import React from "react";
+import React, { forwardRef } from "react";
 import { Link } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import { loginActions } from "../../store/login";
-export default function DropDownList({ closeDropdown }) {
+export default forwardRef(function DropDownList({ closeDropdown }, ref) {
   const dispatch = useDispatch();
   // Hàm đăng xuất
   const logOutAction = async () => {
@@ -20,7 +20,10 @@ export default function DropDownList({ closeDropdown }) {
   };
 
   return (
-    <div className="absolute right-1 top-10 bg-neutral-700 w-44 rounded shadow">
+    <div
+      ref={ref}
+      className="absolute right-1 top-10 bg-neutral-700 w-44 rounded shadow"
+    >
       <ul className="p-4" onClick={closeDropdown}>
         <li className="text-white hover:text-[#C07F00] cursor-pointer">
           <Link to="information">Thông tin cá nhân</Link>
@@ -42,4 +45,4 @@ export default function DropDownList({ closeDropdown }) {
       </ul>
     </div>
   );
-}
+});

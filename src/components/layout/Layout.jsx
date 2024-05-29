@@ -1,4 +1,4 @@
-import { useEffect } from "react";
+import { useEffect, useRef } from "react";
 import { Outlet } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
 import { messModalActions } from "../../store/messengerModal.js";
@@ -41,12 +41,34 @@ export default function Layout() {
     };
     checkAuth();
   }, []);
+  // Nếu click ra ngoài thì đóng modal mess lại
+  const targetRef = useRef();
+  const fromtargetRef = useRef();
+  const handleClickOutside = (event) => {
+    if (
+      targetRef.current &&
+      !targetRef.current.contains(event.target) &&
+      fromtargetRef.current &&
+      !fromtargetRef.current.contains(event.target)
+    ) {
+      dispatch(messModalActions.TOGGLE_POPUP());
+    }
+  };
 
+  useEffect(() => {
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, []);
   return (
     <div>
       <NavBar></NavBar>
       {isAuth && (
-        <div className="text-gradient bg-gradient-to-bl text-5xl fixed right-10 bottom-20 z-20 cursor-pointer">
+        <div
+          ref={fromtargetRef}
+          className="text-gradient bg-gradient-to-bl text-5xl fixed right-10 bottom-20 z-20 cursor-pointer"
+        >
           <i
             onClick={() => {
               dispatch(messModalActions.TOGGLE_POPUP());
@@ -58,7 +80,7 @@ export default function Layout() {
 
       <Outlet></Outlet>
       <Footer></Footer>
-      {modal && <MessengerModal></MessengerModal>}
+      {modal && <MessengerModal ref={targetRef}></MessengerModal>}
     </div>
   );
 }

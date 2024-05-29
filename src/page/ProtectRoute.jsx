@@ -2,13 +2,11 @@ import React, { useEffect, useState } from "react";
 import { Navigate } from "react-router-dom";
 
 const ProtectedRoute = ({ element }) => {
-  const [loaded, setLoaded] = useState(false);
   const [isAuthenticated, setIsAuthenticated] = useState(null);
   // Nếu đã đăng nhập thì sẽ vào route, còn không sẽ bị navigate tới /login
   useEffect(() => {
     const checkAuth = async () => {
       try {
-        setLoaded(false);
         const response = await fetch(
           `${process.env.REACT_APP_API}/check-auth`,
           {
@@ -20,7 +18,7 @@ const ProtectedRoute = ({ element }) => {
           throw new Error("Can not get auth");
         }
         const resData = await response.json();
-        setLoaded(true);
+
         return resData.isAuth;
       } catch (err) {
         console.log(err);

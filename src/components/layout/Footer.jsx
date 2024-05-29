@@ -5,7 +5,7 @@ export default function Footer() {
   };
   return (
     <footer className="bg-[#181414] italic">
-      <section className="flex justify-between mx-auto py-16 max-w-4xl">
+      <section className="flex justify-between flex-col mp:flex-row mx-auto py-16 max-w-4xl px-3 lg:px-0">
         {" "}
         <div>
           <h4 className={styles.title}>CUSTOMER SERVICE</h4>
@@ -34,7 +34,7 @@ export default function Footer() {
             </li>
           </ul>
         </div>
-        <div>
+        <div className="mt-3 mp:mt-0">
           <h4 className={styles.title}>COMPANY</h4>
           <ul>
             <li>
@@ -59,7 +59,7 @@ export default function Footer() {
             </li>
           </ul>
         </div>
-        <div>
+        <div className="mt-3 mp:mt-0">
           <h4 className={styles.title}>SOCIAL MEDIA</h4>
           <ul>
             <li>

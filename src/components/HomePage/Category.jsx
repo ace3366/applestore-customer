@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 import classes from "./Category.module.css";
 export default function Category() {
   return (
-    <section className={`mb-16 ${classes.category}`}>
+    <section className={`mb-16 ${classes.category} px-3 lg:px-0`}>
       <div className="text-center mb-8 italic">
         <h3 className="text-gray-400 text-sm">CAREFULLY CREATED COLLECTIONS</h3>
         <h2 className="text-xl">BROWSE OUT CATEGORIES</h2>

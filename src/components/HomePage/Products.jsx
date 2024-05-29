@@ -35,7 +35,7 @@ export default function Products() {
   const productData = data && data.products.slice(0, 8);
   return (
     <>
-      <section className="mb-12">
+      <section className="mb-12 px-3 lg:px-0">
         <div className=" mb-8 italic">
           <h3 className="text-gray-400 text-sm">MAKE THE HARD WAY</h3>
           <h2 className="text-xl">TOP TRENDING PRODUCTS</h2>

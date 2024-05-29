@@ -1,4 +1,5 @@
 import classes from "./MessengerModal.module.css";
+import { forwardRef } from "react";
 import { createPortal } from "react-dom";
 import Announce from "../DetailPage/Announce";
 import Messenger from "./Messenger";
@@ -12,9 +13,9 @@ if (!modalRoot) {
   modalRoot = newModal;
 }
 
-export default function Modal() {
+export default forwardRef(function MessengerModal({}, ref) {
   return createPortal(
-    <div className={classes.modal}>
+    <div ref={ref} className={classes.modal}>
       <div className={classes["modal-content"]}>
         {/* Thông tin hiển thị chính */}
         <Messenger></Messenger>
@@ -22,4 +23,4 @@ export default function Modal() {
     </div>,
     modalRoot
   );
-}
+});

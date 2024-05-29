@@ -6,6 +6,10 @@ module.exports = {
       fontFamily: {
         encode: ["Encode Sans Expanded", "sans-serif "],
       },
+      screens: {
+        mp: "500px",
+        sp: "360px",
+      },
     },
   },
   plugins: [],
