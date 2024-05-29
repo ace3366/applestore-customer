@@ -12,6 +12,8 @@ export default function HomePage() {
   const socket = openSocket(`${process.env.REACT_APP_API}`, {
     withCredentials: true,
   });
+
+  // Join room chat
   useEffect(() => {
     socket.emit("joinRoom", { roomId: "user" });
   }, []);
@@ -53,16 +55,4 @@ export default function HomePage() {
       <SubInfo></SubInfo>
     </div>
   );
-}
-
-export async function loader() {
-  const response = await fetch(`${process.env.REACT_APP_API}/get-products`, {
-    method: "GET",
-    credentials: "include",
-  });
-  if (!response.ok) {
-    throw json({ messages: "Could not fetch product" }, { status: 500 });
-  } else {
-    return response;
-  }
 }

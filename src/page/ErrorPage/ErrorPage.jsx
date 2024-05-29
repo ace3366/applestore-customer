@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import classes from "./ErrorPage.module.css";
 export default function ErrorPage() {
   return (
@@ -10,13 +11,15 @@ export default function ErrorPage() {
           Oops!
         </h2>
         <p className="text-2xl mt-10">Look like something went wrong</p>
-        <h3 className="text-2xl mt-10 mb-8">
-          It may take some time to fetch data from the server<br></br> Please
-          stand by or refresh the page
-        </h3>
-        <h3 className="text-xl text-red-500 font-semibold">
+        <h3 className="text-xl text-red-500 font-semibold mt-8">
           We're sorry for this inconvenience
         </h3>
+        <Link
+          to="/"
+          className="mt-10 inline-block hover:text-blue-400 text-blue-700 text-xl"
+        >
+          <i className="fa-solid fa-circle-left"></i> Back to homepage
+        </Link>
       </div>
     </main>
   );
