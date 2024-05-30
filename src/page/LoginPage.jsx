@@ -3,7 +3,6 @@ import classes from "./LoginPage.module.css";
 
 export default function LoginPage() {
   const validations = useActionData();
-
   return (
     <>
       <div className={classes.login}>
@@ -76,9 +75,17 @@ export async function action({ request, params }) {
     });
     // Return validation errors
     if (!response.ok) {
-    
       return response;
     }
     return redirect("/");
-  } catch (err) {}
+  } catch (err) {
+    console.log(err);
+    return {
+      error: [
+        {
+          msg: "Something went wrong with the server. Maybe the server is starting up right now",
+        },
+      ],
+    };
+  }
 }

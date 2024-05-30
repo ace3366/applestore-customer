@@ -31,12 +31,13 @@ export default function Modal() {
         >
           <i className="fa-solid fa-xmark"></i>
         </div>
-        <div className="flex">
-          <div className="basis-6/12">
+        {/* Phần content */}
+        <div className="md:flex ">
+          <div className="md:basis-6/12 flex items-center">
             {" "}
-            <img src={modalInfo.img} alt="" />
+            <img className="" src={modalInfo.img} alt="" />
           </div>
-          <div className="basis-6/12 pt-16 pl-6 pr-16 italic">
+          <div className="md:basis-6/12 pt-16 pl-6 pr-16 italic">
             <h2 className="text-3xl">{modalInfo.name}</h2>
             <div className="text-neutral-500 text-2xl py-2">
               {modalInfo.realPrice}

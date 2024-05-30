@@ -1,6 +1,5 @@
 import classes from "./Information.module.css";
 import { useEffect, useState } from "react";
-import { getData } from "../util/localStorage.js";
 export default function Information() {
   const [user, setUser] = useState({});
   useEffect(() => {
@@ -38,7 +37,7 @@ export default function Information() {
             </h2>
 
             {/* Phần info */}
-            <div className="w-4/5 text-xl ">
+            <div className="w-4/5 mp:text-xl sp:text-base text-sm ">
               <table>
                 <tr>
                   <td className="pr-12 italic">Tên :</td>

@@ -11,9 +11,9 @@
   position: fixed;
   overflow: scroll;
   top: 50%;
-  left: 45%;
+  left: 50%;
   transform: translate(-50%, -50%);
-  min-width: 60rem;
+  min-width: 20rem;
   max-height: 40rem;
   padding: 0;
   z-index: 2;

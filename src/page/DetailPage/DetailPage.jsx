@@ -120,51 +120,54 @@ export default function DetailPage() {
 
   return (
     <>
-      <div className="max-w-4xl mx-auto my-32">
+      <div className="max-w-4xl mx-8 lg:mx-auto my-32">
         {/* Phần thông tin chung */}
-        <section className="flex justify-between gap-6">
-          {/* Khu vực chọn hình */}
-          <div className="basis-1/12">
-            <img
-              src={product.img1}
-              alt=""
-              onClick={() => {
-                setImage(product.img1);
-              }}
-              className="cursor-pointer mb-2"
-            />
-            <img
-              src={product.img2}
-              alt=""
-              onClick={() => {
-                setImage(product.img2);
-              }}
-              className="cursor-pointer mb-2"
-            />
-            <img
-              src={product.img3}
-              alt=""
-              onClick={() => {
-                setImage(product.img3);
-              }}
-              className="cursor-pointer mb-2"
-            />
-            <img
-              src={product.img4}
-              alt=""
-              onClick={() => {
-                setImage(product.img4);
-              }}
-              className="cursor-pointer mb-2"
-            />
+        <section className="flex flex-col md:flex-row justify-between gap-6">
+          <div className="md:basis-1/2 flex gap-2">
+            {/* Khu vực chọn hình */}
+            <div className="basis-1/5">
+              <img
+                src={product.img1}
+                alt=""
+                onClick={() => {
+                  setImage(product.img1);
+                }}
+                className="cursor-pointer mb-2"
+              />
+              <img
+                src={product.img2}
+                alt=""
+                onClick={() => {
+                  setImage(product.img2);
+                }}
+                className="cursor-pointer mb-2"
+              />
+              <img
+                src={product.img3}
+                alt=""
+                onClick={() => {
+                  setImage(product.img3);
+                }}
+                className="cursor-pointer mb-2"
+              />
+              <img
+                src={product.img4}
+                alt=""
+                onClick={() => {
+                  setImage(product.img4);
+                }}
+                className="cursor-pointer mb-2"
+              />
+            </div>
+            {/* Khu vực show hình theo hình đã chọn */}
+            <div className="basis-4/5">
+              {" "}
+              <img src={image} alt="" />
+            </div>
           </div>
-          {/* Khu vực show hình theo hình đã chọn */}
-          <div className="basis-5/12">
-            {" "}
-            <img src={image} alt="" />
-          </div>
+
           {/* Khu vực hiển thị thông tin và add to cart */}
-          <div className="basis-6/12 italic">
+          <div className="md:basis-1/2  italic">
             <h2 className="text-3xl">{product.name}</h2>
             <div className="my-7 text-2xl text-neutral-500 font-light">
               {priceConverter(product.price)}
@@ -184,7 +187,7 @@ export default function DetailPage() {
               <div className="flex">
                 <div className="border-2 border-solid border-neutral-300 flex">
                   {" "}
-                  <div className="w-40 my-auto pl-3 text-neutral-400">
+                  <div className="mp:w-40 w-24  my-auto pl-3 text-neutral-400">
                     QUANTITY
                   </div>
                   <i
@@ -225,7 +228,7 @@ export default function DetailPage() {
         </section>
 
         {/* Phần mô tả */}
-        <section>
+        <section className="mt-4">
           <button className=" text-neutral-300 py-3 px-5 italic">
             DESCRIPTION
           </button>

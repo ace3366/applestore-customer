@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { Navigate } from "react-router-dom";
-
+import LoadingSpin from "../components/UI/LoadingSpin.jsx";
 const ProtectedRoute = ({ element }) => {
   const [isAuthenticated, setIsAuthenticated] = useState(null);
   // Nếu đã đăng nhập thì sẽ vào route, còn không sẽ bị navigate tới /login
@@ -32,7 +32,12 @@ const ProtectedRoute = ({ element }) => {
   }, []);
 
   if (isAuthenticated === null) {
-    return <div className="text-center h-screen">Loading...</div>;
+    return (
+      <div className="text-center h-screen flex justify-center mt-20">
+        {" "}
+        <LoadingSpin></LoadingSpin>{" "}
+      </div>
+    );
   }
 
   return isAuthenticated ? element : <Navigate to="/login" replace />;

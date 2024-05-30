@@ -1,7 +1,5 @@
 import { Link, Form, redirect, useActionData } from "react-router-dom";
 import classes from "./LoginPage.module.css";
-import { useSelector, useDispatch } from "react-redux";
-import { setData, getData } from "../util/localStorage.js";
 
 export default function RegisterPage() {
   const validations = useActionData();

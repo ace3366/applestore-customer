@@ -51,10 +51,10 @@ export default function CheckoutPage() {
 
   return (
     <>
-      <div className="max-w-4xl mx-auto mt-12 mb-16">
+      <div className="max-w-4xl px-4 lg:px-0 mx-auto mt-12 mb-16">
         <Banner></Banner>
         <h3 className="text-2xl mb-5 my-12 font italic">BILLING DETAILS</h3>
-        <div className="flex gap-4">
+        <div className="flex flex-col-reverse md:flex-row gap-4">
           {/* Phần form */}
           <Form method="post" className="basis-2/3">
             <div className={styles.label} htmlFor="">

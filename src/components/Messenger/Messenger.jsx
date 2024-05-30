@@ -104,7 +104,7 @@ export default function Messenger() {
             alt=""
           />
           <input
-            className="w-64 focus:outline-none pl-1"
+            className="mp:w-64 w-32  focus:outline-none pl-1"
             type="text"
             value={message}
             placeholder="Enter Message!"

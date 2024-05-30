@@ -47,14 +47,14 @@ export default function CartPage() {
 
   return (
     <>
-      <div className="max-w-4xl mx-auto mt-10 mb-12">
+      <div className="max-w-4xl lg:px-0 px-3 mx-auto mt-10 mb-12">
         <Banner></Banner>
         <h3 className="text-2xl mb-5 my-12 italic">CATEGORIES</h3>
         {/* Phần thông tin cart */}
-        <div className="flex justify-between gap-8">
+        <div className="flex md:flex-row flex-col justify-between gap-8">
           {" "}
           {/* Phần products */}
-          <div className="italic basis-2/3">
+          <div className="italic md:basis-2/3">
             {/* List sản phẩm trong Card */}
             <table className=" w-full mb-12">
               {/* Phần tiêu đề hiển thị */}
@@ -89,7 +89,7 @@ export default function CartPage() {
             )}
             {/* Thanh navigate */}
             <div className="w-full bg-neutral-100">
-              <div className="flex justify-between py-5 px-6">
+              <div className="flex mp:flex-row flex-col justify-between py-5 px-6">
                 <Link
                   to="/shop"
                   onClick={() => {
@@ -98,7 +98,7 @@ export default function CartPage() {
                       left: 0,
                     });
                   }}
-                  className="hover:text-[#c07f00] font-light text-lg py-1 cursor-pointer"
+                  className="hover:text-[#c07f00] text-left font-light text-lg py-1 cursor-pointer"
                 >
                   <i className="fa-solid fa-left-long mr-2"></i>Continue
                   shopping
@@ -111,7 +111,7 @@ export default function CartPage() {
                       left: 0,
                     });
                   }}
-                  className="hover:text-[#c07f00] hover:border-[#c07f00] font-light text-lg py-1 px-3 cursor-pointer border-2 border-neutral-900 "
+                  className="hover:text-[#c07f00] text-right hover:border-[#c07f00] font-light text-lg py-1 px-3 cursor-pointer border-2 border-neutral-900 "
                 >
                   Proceed to checkout
                   <i className="fa-solid fa-right-long ml-2"></i>
@@ -120,7 +120,7 @@ export default function CartPage() {
             </div>
           </div>
           {/* Phần total */}
-          <div className="basis-1/3 italic">
+          <div className="md:basis-1/3 italic">
             <div className="py-16 px-8 bg-neutral-100">
               <h2 className="text-xl my-5 font-medium">CART TOTAL</h2>
               <div className="flex justify-between pb-3 border-b-2">

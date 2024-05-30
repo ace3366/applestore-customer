@@ -5,7 +5,7 @@ export default function Footer() {
   };
   return (
     <footer className="bg-[#181414] italic">
-      <section className="flex justify-between flex-col mp:flex-row mx-auto py-16 max-w-4xl px-3 lg:px-0">
+      <section className="flex justify-between flex-col text-center mp:text-left mp:flex-row mx-auto py-16 max-w-4xl px-3 lg:px-0">
         {" "}
         <div>
           <h4 className={styles.title}>CUSTOMER SERVICE</h4>

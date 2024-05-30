@@ -1,4 +1,3 @@
-import { json } from "react-router-dom";
 import openSocket from "socket.io-client";
 import { useEffect } from "react";
 import { useDispatch } from "react-redux";

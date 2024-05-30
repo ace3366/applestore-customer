@@ -23,7 +23,6 @@ export default function History() {
         }
         const resData = await response.json();
         setOrders(resData.orders);
-       
       } catch (err) {
         console.log(err);
       }
@@ -36,11 +35,11 @@ export default function History() {
       <div className="max-w-4xl mx-auto mt-10 mb-12 ">
         <Banner></Banner>
       </div>
-      <div className="max-w-6xl mx-auto h-screen">
+      <div className="max-w-6xl mx-auto min-h-screen">
         {/* Phần thông tin order */}
         <div className="italic">
           {/* List sản phẩm trong Card */}
-          <table className=" w-full mb-12">
+          <table className=" w-full mb-12 ">
             {/* Phần tiêu đề hiển thị */}
             <tr className="bg-neutral-100">
               <th className={styles.td}>ID ORDER</th>
